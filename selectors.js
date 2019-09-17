@@ -1,8 +1,3 @@
-export const LOGOUT_BUTTON_SELECTOR =
-     '#root > div > div:nth-child(2) > div > header > ul > li > div > button';
-
-
-
 //for signin page
 export const SignInButton = 
     'a[href = "#/login"][class="box"]'
