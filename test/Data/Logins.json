@@ -1,0 +1,9 @@
+{
+  "user" :{
+    "name" : "Tutor Demo",
+    "email" : "tutor_demo",
+    "password" : "1234!@#$Qw",
+    "role" : "tutor"
+  }
+
+}
