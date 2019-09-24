@@ -1,6 +1,7 @@
 import {testLoginPage } from '../pages/TestLogin.page'
-import { assert,expect } from 'chai';
-import { LOGOUT_BUTTON_TEXT } from '../constants/SystemLabels.constant';
+import { assert } from 'chai';
+import {logoutbuttonValidation} from '../validations/TestLogin.validation';
+//import { LOGOUT_BUTTON_TEXT } from '../constants/SystemLabels.constant';
 describe('test login page for experiment',()=>{
    before('for Opening landing page.',()=>{
        testLoginPage.open();
@@ -12,11 +13,7 @@ describe('test login page for experiment',()=>{
         let web = JSON.parse(rawdata);
         let user = web["user"];
         testLoginPage.login(user);        
-      //  assert.equal(
-       //     testLoginPage.LogoutButton.getAttribute("value"),
-         //   LOGOUT_BUTTON_TEXT,
-       // );
-        //expect(testLoginPage.LogoutButton.getAttribute("value")).toContain("Logout");
-        browser.driver.sleep(10000);
+        browser.pause(15000); 
+        logoutbuttonValidation.LogOutButtonValidation();
    })
 });
